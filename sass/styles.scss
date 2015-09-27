@@ -17,12 +17,11 @@
 }
 
 body {
-  background: url('picture.jpg') black;
-  background-blend-mode: multiply;
+  background: black;
   filter: hue-rotate(75deg);
 }
 
-.picture {
+.do-i-need-to-wear-glasses {
   position: absolute;
   top: 0;
   right: -15px;
@@ -36,7 +35,7 @@ body {
   background-size: cover;
 }
 
-.foo {
+.make-it-crazy {
   animation-name: puke, whaaa;
   animation-duration: 3s, 10s;
   transform-origin: 50% 50%;
