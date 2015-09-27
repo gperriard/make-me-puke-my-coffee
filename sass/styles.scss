@@ -1,0 +1,46 @@
+@keyframes whaaa {
+  0%   {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes puke {
+  0% {
+    filter: hue-rotate(25deg);
+  }
+  100% {
+    filter: hue-rotate(75deg);
+  }
+}
+
+body {
+  background: url('picture.jpg') black;
+  background-blend-mode: multiply;
+  filter: hue-rotate(75deg);
+}
+
+.picture {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  bottom: -15px;
+  left: 0;
+
+  background-image: url('/blend-mode/web/assets/images/picture.jpg'), url('/blend-mode/web/assets/images/picture.jpg');
+  background-position: 0 0, -10px -10px;
+  background-repeat: no-repeat, no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.foo {
+  animation-name: puke, whaaa;
+  animation-duration: 3s, 10s;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal, alternate;
+}
